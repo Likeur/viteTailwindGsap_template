@@ -4,11 +4,140 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Vite Starter</title>
   </head>
-  <body>
-    <main class="w-screen h-screen grid place-content-center overflow-hidden">
-      <h1 class="text-3xl lg:text-5xl">Hello world</h1>
+  <body class="overflow-x-hidden w-screen">
+    <div class="absolute z-10 h-screen w-screen">
+      <div class="size-full absolute bg-black/75 z-30 text-transparent">.</div>
+      <video src="assets/vid1.mp4" autoplay loop class="size-full object-cover absolute z-20"></video>
+    </div>
+    <nav id="navigation" class="fixed overflow-hidden scale-y-0 grid lg:grid-cols-2 place-content-center z-50 h-screen w-screen bg-orange-950">
+      <div></div>
+      <ul class="flex flex-col gap-4 font-bold text-4xl lg:gap-8 lg:text-6xl text-white">
+        <li class="overflow-hidden"><a href="" class="block link">à propos</a></li>
+        <li class="overflow-hidden"><a href="" class="block link">Menu</a></li>
+        <li class="overflow-hidden"><a href="" class="block link">Galerie</a></li>
+        <li class="overflow-hidden"><a href="" class="block link">contact</a></li>
+      </ul>
+    </nav>
+    <header class="container sticky top-3 z-50 flex items-center justify-between mx-auto p-5 md:p-6 lg:p-8">
+      <a href="" class="flex flex-col relative z-50">
+        <span class="text-3xl text-white mix-blend-difference logo">Like<span class="text-orange-600 font-bold">food</span></span>
+      </a>
+      <div class="flex items-center gap-3">
+        <a href="" class="p-4 px-8 bg-orange-600 h-14 rounded-full grid place-content-center hover:scale-110 duration-500 shadow-md text-xl text-white">Reserver</a>
+        <button id="toggle__menu" class="relative hover:scale-110 z-50 size-14 bg-orange-600 rounded-full shadow-md grid place-content-center active:scale-90 duration-500 p-4">
+          <div>
+            <div id="bar1" class="h-0.5 bg-white w-7 text-transparent rounded-md">.</div>
+            <div id="bar2" class="h-0.5 bg-white w-7 text-transparent rounded-md mt-1">.</div>
+            <div id="bar3" class="h-0.5 bg-white w-7 text-transparent rounded-md mt-1">.</div>
+          </div>
+        </button>
+      </div>
+    </header>
+
+    <!-- Content div for barbajs -->
+    <main class="relative z-40">
+      <!-- <div class="absolute size-[40rem] rounded-full bg-orange-600 blur-3xl opacity-30"></div> -->
+      <section class="lg:h-[85vh] container mx-auto p-5 md:p-6 lg:p-8 flex justify-between items-end">
+          <div class="mb-12 text-white">
+            <div class="text-4xl md:text-5xl lg:text-6xl font-bold flex flex-col">
+              <div class="overflow-hidden "><h3 class="head__text">Découvrez une <span class="text-orange-600">expérience</span></h3></div>
+              <div class="overflow-hidden mt-1"><h3 class="head__text">culinaire exceptionnelle</h3></div>
+              <div class="overflow-hidden mt-1"><h3 class="head__text">chez <span class="text-orange-600">LikeFood</span></h3></div>
+            </div>
+            <div class="mt-5"><p class="lg:w-[50%] font-light text-xl">Savourez chaque bouchée et plongez dans un univers de saveurs uniques</p></div>
+
+            <div class="flex flex-col lg:flex-row gap-4 lg:gap-8 mt-5">
+              <button class="p-4 px-8 h-14 grid place-content-center bg-orange-600 rounded-full border border-white/10 text-white hover:bg-orange-950 text-xl duration-300">Réserver une table</button>
+              <button class="p-4 px-8 h-14 grid place-content-center text-orange-600 border border-orange-600/20 bg-orange-100 rounded-full text-xl">Voir le menu</button>
+            </div>
+          </div>
+
+          <div class="relative lg:top-24 grid place-content-center">
+            <img src="/assets/scrollez.png" class="size-60" id="scrollText" alt="">
+            
+            <div class="animate-bounce text-4xl  text-white top-[40%] right-[42%] mt-3 absolute"><i class='bx bx-arrow-back -rotate-90'></i></div>
+             
+          </div>
+      </section>
+
+      <section class="lg:h-[100vh] flex items-center">
+        <div class="grid container mx-auto p-5 md:p-6 lg:p-8 lg:grid-cols-2">
+          <div>
+            <div>
+              <div class="overflow-hidden"><h4 class="font-bold text-orange-950 text-4xl lg:text-5xl">La petite</h4></div>
+              <div class="overflow-hidden"><h4 class="font-bold text-orange-600 text-4xl lg:text-5xl">histoire</h4></div>
+            </div>
+            <div class="h-[50vh] lg:ml-20 w-[25vw] mt-8">
+              <img src="assets/restau.jpg" class="size-full object-cover" alt="">
+            </div>
+          </div>
+          <div class="md:text-xl flex flex-col justify-center">
+            <p>LikeFood est le fruit de la passion commune de deux amis d'enfance pour la cuisine et la gastronomie. Inspirés par des ingrédients frais et locaux, ainsi que par des techniques de cuisine innovantes, ils ont ouvert le restaurant.  </p>
+
+            <p class="mt-4">Depuis son ouverture, LikeFood s'est fait un nom en offrant une expérience gastronomique inoubliable, alliant créativité, qualité et goût authentique. Chaque plat est préparé avec soin pour ravir les papilles, dans une ambiance chaleureuse et conviviale. Chez LikeFood, la cuisine est une passion qui rassemble les gens, et ils s'engagent à offrir à leurs clients une expérience culinaire exceptionnelle à chaque visite.</p>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Nos avis clients -->
+      <section class="lg:h-[100vh] ">
+        <div>
+
+        </div>
+      </section>
+
+      <!-- cta -->
+
+      <section class="flex h-[100vh] bg-orange-900 justify-center items-center">
+        <div>
+          <div>
+            <h2 class="text-5xl text-center font-bold text-white lg:text-8xl">Alors <br> on reserve ?</h2>
+          </div>
+          <div class="mt-6">
+            <a href="" class="p-4 px-8 bg-orange-600 h-12 rounded-md grid place-content-center shadow-md text-xl text-white">Reserver</a>
+          </div>
+
+          <div class="text-center mt-6 text-2xl text-white">
+            <p>Nous sommes ouvert 7j/7, 20h/24</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- contact section -->
+      <section class="lg:h-[130vh] bg-orange-950 flex items-center">
+        <div class="grid lg:grid-cols-2 container mx-auto p-5 md:p-6 lg:p-8">
+          <div>
+
+          </div>
+          <div>
+            <form action="" class="flex flex-col text-white">
+              <div class=" flex flex-col">
+                <label for="" class="text-2xl lg:text-3xl text-white">votre nom</label>
+                <input type="text" name="" class="border-b  border-white/30 p-4 mt-2 bg-transparent outline-none placeholder:text-xl focus:border-orange-600/50"  placeholder="Likeur off" id="">
+                
+              </div>
+              <div class="mt-5 lg:mt-6 flex flex-col">
+                <label for="" class="text-2xl lg:text-3xl text-white">votre email</label>
+                <input type="email" name="" class="border-b  border-white/30 p-4 mt-2 bg-transparent outline-none placeholder:text-xl focus:border-orange-600/50"  placeholder="likeur.off@gmail.com" id="">
+                
+              </div>
+              <div class="mt-5 lg:mt-6 flex flex-col">
+                <label for="" class="text-2xl lg:text-3xl text-white">Laissez-nous un message</label>
+                <textarea name=""  class="border-b  border-white/30 p-4 mt-2 bg-transparent outline-none placeholder:text-xl focus:border-orange-600/50" placeholder="votre message" id="" cols="30" rows="8"></textarea>
+                
+              </div>
+
+              <div class="-mt-5 flex justify-end">
+                <button type="submit" class="bg-orange-600 text-xl text-white w-56 rounded-md p-4 mr-10 h-12 grid place-content-center px-8">Envoyer</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Script files here -->
